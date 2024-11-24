@@ -9,6 +9,7 @@
 </head>
 <body>
     <div id="game-container">
+        <!-- Welcome Popup -->
         <div id="popup-start" class="popup">
             <h1>Dice Game</h1>
             <img src="../images/animations.gif" alt="Dice Animation" id="game-heading-animation">
@@ -17,6 +18,7 @@
             <button id="start-game">Let's Start</button>
         </div>
 
+        <!-- Instructions Popup -->
         <div id="instructions" class="popup hidden">
             <h2>How to Play</h2>
             <p>1. Press the "Roll Dice" button to roll the dice.</p>
@@ -26,12 +28,23 @@
             <button id="close-instructions">Start Playing</button>
         </div>
 
+        <!-- Game Box -->
         <div id="game-box" class="hidden">
+            <!-- Total Scores -->
             <div id="scores">
                 <p><strong>Your Total Score:</strong> <span id="user-score">0</span></p>
                 <p><strong>Computer Total Score:</strong> <span id="computer-score">0</span></p>
             </div>
 
+            <!-- Individual Round Scores -->
+            <div id="round-scores">
+                <h2>Round Scores</h2>
+                <div id="round-details">
+                    <!-- Round details will be dynamically added here -->
+                </div>
+            </div>
+
+            <!-- Dice Display Section -->
             <div id="dice-display">
                 <div>
                     <h3>Your Dice</h3>
@@ -45,12 +58,12 @@
                 </div>
             </div>
 
+            <!-- Buttons -->
             <button id="roll-dice">Roll Dice</button>
             <button id="reset-game">Reset Game</button>
-
-            <p id="result-message"></p>
         </div>
 
+        <!-- Winner Popup -->
         <div id="winner-popup" class="popup hidden">
             <p id="winner-message"></p>
             <button id="close-popup">X</button>

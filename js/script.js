@@ -95,6 +95,8 @@ function resetGame() {
 }
 
 function showPopup(message) {
-    document.getElementById("winner-message").textContent = message;
-    document.getElementById("winner-popup").classList.remove("hidden");
+    setTimeout(() => {
+        document.getElementById("winner-message").textContent = message;
+        document.getElementById("winner-popup").classList.remove("hidden");
+    }, 3000); // Delay of 3 seconds (3000ms)
 }

@@ -17,57 +17,8 @@ body {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     width: 80%;
     max-width: 500px;
-    position: relative;
 }
 
-/* Tooltip Styling */
-#tooltip-container {
-    position: relative;
-    display: inline-block;
-    margin-bottom: 10px;
-}
-
-#tooltip-icon {
-    font-size: 18px;
-    color: #007bff;
-    cursor: pointer;
-    margin-left: 10px;
-    vertical-align: middle;
-}
-
-#tooltip-text {
-    display: none;
-    position: absolute;
-    top: 30px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    padding: 10px;
-    width: 90%;
-    max-width: 250px;
-    text-align: left;
-    z-index: 10;
-}
-
-#tooltip-container:hover #tooltip-text {
-    display: block;
-}
-
-#tooltip-text ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-#tooltip-text li {
-    font-size: 14px;
-    margin: 5px 0;
-}
-
-/* Popup Styling */
 .popup {
     display: flex;
     flex-direction: column;
@@ -88,7 +39,6 @@ img {
     margin: 5px;
 }
 
-/* Scores Styling */
 #scores {
     margin: 20px 0;
 }
@@ -112,7 +62,6 @@ img {
     margin: 5px 0;
 }
 
-/* Buttons Styling */
 button {
     padding: 10px 20px;
     font-size: 16px;
@@ -128,7 +77,6 @@ button:hover {
     background-color: #0056b3;
 }
 
-/* Winner Popup Styling */
 #winner-popup {
     position: fixed;
     top: 50%;
@@ -144,4 +92,56 @@ button:hover {
 
 #winner-popup button {
     margin-top: 10px;
+}
+
+.popup {
+    /* Basic styling for popup */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+    z-index: 1000;
+}
+
+.popup.hidden {
+    /* Hide popup when not active */
+    display: none;
+}
+
+.popup h2 {
+    /* Heading style for popups */
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.popup p {
+    /* Paragraph style inside popups */
+    font-size: 1rem;
+    margin: 10px 0;
+    color: #666;
+}
+
+.popup button {
+    /* Button styling for popups */
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.popup button:hover {
+    /* Hover effect for popup buttons */
+    background-color: #0056b3;
 }

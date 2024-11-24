@@ -9,22 +9,9 @@
 </head>
 <body>
     <div id="game-container">
-        <!-- Game Title with Tooltip -->
-        <div id="tooltip-container">
-            <h1>Dice Game</h1>
-            <span id="tooltip-icon">ℹ️</span>
-            <div id="tooltip-text">
-                <p><strong>Scoring Rules:</strong></p>
-                <ul>
-                    <li><strong>1 on any die:</strong> Score = 0</li>
-                    <li><strong>Both dice same:</strong> Score = (sum of dice) × 2</li>
-                    <li><strong>Otherwise:</strong> Score = sum of dice</li>
-                </ul>
-            </div>
-        </div>
-
         <!-- Welcome Popup -->
         <div id="popup-start" class="popup">
+            <h1>Dice Game</h1>
             <img src="../images/animations.gif" alt="Dice Animation" id="game-heading-animation">
             <p id="author-name">Created by Piya Chhabra</p>
             <p>Welcome! Click below to start the game.</p>
@@ -39,6 +26,15 @@
             <p>3. Your score for each round is calculated based on the dice values.</p>
             <p>4. After 3 rounds, the winner is announced.</p>
             <button id="close-instructions">Start Playing</button>
+        </div>
+
+        <!-- Scoring Rules Popup -->
+         <div id="scoring-rules" class="popup hidden">
+            <h2>Scoring Rules</h2>
+            <p>1. Rolling a 1 in any die gives a score of 0 for that round.</p>
+            <p>2. Rolling a pair (e.g., 5 and 5) gives double the total: (5+5)*2=20.</p>
+            <p>3. Other combinations add up to the total of the two dice (e.g., 3+2=5).</p>
+            <button id="close-scoring">Got It!</button>
         </div>
 
         <!-- Game Box -->

@@ -6,9 +6,15 @@ document.getElementById("start-game").addEventListener("click", () => {
     document.getElementById("popup-start").classList.add("hidden");
     document.getElementById("instructions").classList.remove("hidden");
 });
-
+// Event listener for closing the instructions popup and opening scoring rules
 document.getElementById("close-instructions").addEventListener("click", () => {
     document.getElementById("instructions").classList.add("hidden");
+    document.getElementById("scoring-rules").classList.remove("hidden");
+});
+
+// Event listener for closing the scoring rules popup
+document.getElementById("close-scoring").addEventListener("click", () => {
+    document.getElementById("scoring-rules").classList.add("hidden");
     document.getElementById("game-box").classList.remove("hidden");
 });
 

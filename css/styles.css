@@ -1,0 +1,153 @@
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f0f8ff;
+    margin: 0;
+    padding: 0;
+}
+
+/* Game container */
+#game-container {
+    margin: 50px auto;
+    width: 90%;
+    max-width: 800px;
+    padding: 20px;
+    border: 2px solid #4CAF50;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+/* Container for heading and animation */
+#heading-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px; /* Space between the heading and animation */
+    margin-bottom: 20px;
+}
+
+/* Heading style */
+#heading-container h1 {
+    font-size: 2.5em;
+    color: #4CAF50;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Animation style */
+#game-heading-animation {
+    width: 100px; /* Adjust size as needed */
+    height: auto;
+    border-radius: 10px; /* Optional: Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Shadow effect */
+}
+/* Author name style */
+#author-name {
+    font-size: 1em;
+    color: #555;
+    margin-top: 10px;
+    font-style: italic;     
+}
+
+/* Page title */
+h1 {
+    color: #4CAF50;
+}
+
+/* Popup windows */
+.popup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    padding: 20px;
+    border: 2px solid #4CAF50;
+    border-radius: 10px;
+    background-color: #e8f5e9;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Instruction popup header */
+#instructions h2 {
+    color: #4CAF50;
+}
+
+/* Score display */
+#scores {
+    margin: 20px 0;
+    font-size: 1.2em;
+}
+
+/* Dice display section */
+#dice-display {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+#dice-display img {
+    width: 100px;
+    height: 100px;
+}
+
+/* Buttons */
+button {
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Result message */
+#result-message {
+    margin-top: 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Winner popup styling */
+#winner-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    padding: 20px;
+    border: 2px solid #4CAF50;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    text-align: center;
+}
+
+#winner-popup p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+#winner-popup button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+
+#winner-popup button:hover {
+    background-color: #45a049;
+}

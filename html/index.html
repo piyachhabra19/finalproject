@@ -9,9 +9,22 @@
 </head>
 <body>
     <div id="game-container">
+        <!-- Game Title with Tooltip -->
+        <div id="tooltip-container">
+            <h1>Dice Game</h1>
+            <span id="tooltip-icon">ℹ️</span>
+            <div id="tooltip-text">
+                <p><strong>Scoring Rules:</strong></p>
+                <ul>
+                    <li><strong>1 on any die:</strong> Score = 0</li>
+                    <li><strong>Both dice same:</strong> Score = (sum of dice) × 2</li>
+                    <li><strong>Otherwise:</strong> Score = sum of dice</li>
+                </ul>
+            </div>
+        </div>
+
         <!-- Welcome Popup -->
         <div id="popup-start" class="popup">
-            <h1>Dice Game</h1>
             <img src="../images/animations.gif" alt="Dice Animation" id="game-heading-animation">
             <p id="author-name">Created by Piya Chhabra</p>
             <p>Welcome! Click below to start the game.</p>

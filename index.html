@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Game - Piya Chhabra</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="../js/script.js" defer></script>
+</head>
+<body>
+    <div id="game-container">
+        <div id="popup-start" class="popup">
+            <h1>Dice Game</h1>
+            <img src="../images/animations.gif" alt="Dice Animation" id="game-heading-animation">
+            <p id="author-name">Created by Piya Chhabra</p>
+            <p>Welcome! Click below to start the game.</p>
+            <button id="start-game">Let's Start</button>
+        </div>
+
+        <div id="instructions" class="popup hidden">
+            <h2>How to Play</h2>
+            <p>1. Press the "Roll Dice" button to roll the dice.</p>
+            <p>2. Both you and the computer roll two dice.</p>
+            <p>3. Your score for each round is calculated based on the dice values.</p>
+            <p>4. After 3 rounds, the winner is announced.</p>
+            <button id="close-instructions">Start Playing</button>
+        </div>
+
+        <div id="game-box" class="hidden">
+            <div id="scores">
+                <p><strong>Your Total Score:</strong> <span id="user-score">0</span></p>
+                <p><strong>Computer Total Score:</strong> <span id="computer-score">0</span></p>
+            </div>
+
+            <div id="dice-display">
+                <div>
+                    <h3>Your Dice</h3>
+                    <img id="user-die1" src="../images/dice1.png" alt="Die 1">
+                    <img id="user-die2" src="../images/dice1.png" alt="Die 2">
+                </div>
+                <div>
+                    <h3>Computer's Dice</h3>
+                    <img id="computer-die1" src="../images/dice1.png" alt="Die 1">
+                    <img id="computer-die2" src="../images/dice1.png" alt="Die 2">
+                </div>
+            </div>
+
+            <button id="roll-dice">Roll Dice</button>
+            <button id="reset-game">Reset Game</button>
+
+            <p id="result-message"></p>
+        </div>
+
+        <div id="winner-popup" class="popup hidden">
+            <p id="winner-message"></p>
+            <button id="close-popup">X</button>
+        </div>
+    </div>
+</body>
+</html>

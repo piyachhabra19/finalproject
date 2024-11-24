@@ -4,9 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dice Game - Piya Chhabra</title>
-    <!-- Link to the CSS file inside the css/ folder -->
     <link rel="stylesheet" href="css/styles.css">
-    <!-- Link to the JavaScript file inside the js/ folder -->
     <script src="js/script.js" defer></script>
 </head>
 <body>
@@ -14,7 +12,6 @@
         <!-- Welcome Popup -->
         <div id="popup-start" class="popup">
             <h1>Dice Game</h1>
-            <!-- Animation GIF from images/ folder -->
             <img src="images/animations.gif" alt="Dice Animation" id="game-heading-animation">
             <p id="author-name">Created by Piya Chhabra</p>
             <p>Welcome! Click below to start the game.</p>
@@ -33,7 +30,6 @@
 
         <!-- Game Box -->
         <div id="game-box" class="hidden">
-            <!-- Scores Section -->
             <div id="scores">
                 <p><strong>Your Total Score:</strong> <span id="user-score">0</span></p>
                 <p><strong>Computer Total Score:</strong> <span id="computer-score">0</span></p>
@@ -43,7 +39,6 @@
             <div id="dice-display">
                 <div>
                     <h3>Your Dice</h3>
-                    <!-- Dice images from images/ folder -->
                     <img id="user-die1" src="images/dice1.png" alt="Die 1">
                     <img id="user-die2" src="images/dice1.png" alt="Die 2">
                 </div>
@@ -54,11 +49,9 @@
                 </div>
             </div>
 
-            <!-- Game Control Buttons -->
+            <!-- Buttons -->
             <button id="roll-dice">Roll Dice</button>
             <button id="reset-game">Reset Game</button>
-
-            <p id="result-message"></p>
         </div>
 
         <!-- Winner Popup -->

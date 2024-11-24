@@ -38,10 +38,10 @@ document.getElementById("roll-dice").addEventListener("click", () => {
         if (rounds === 3) {
             const winner =
                 userScore > computerScore
-                    ? "Congratulations, You Win!🥳"
+                    ? "Congratulations, You Win! 🎉"
                     : userScore < computerScore
-                    ? "Computer Wins, Better Luck Next Time!💔"
-                    : "It's a Tie!🪢";
+                    ? "Computer Wins! Better Luck Next Time! 💻"
+                    : "It's a Tie! 🤝";
             showPopup(winner);
         }
     }
@@ -74,12 +74,13 @@ function resetGame() {
 
     document.getElementById("user-score").textContent = userScore;
     document.getElementById("computer-score").textContent = computerScore;
-    document.getElementById("result-message").textContent = "";
 
-    document.getElementById("user-die1").src = `images/dice1.png`;
-    document.getElementById("user-die2").src = `images/dice1.png`;
-    document.getElementById("computer-die1").src = `images/dice1.png`;
-    document.getElementById("computer-die2").src = `images/dice1.png`;
+    document.getElementById("user-die1").src = "images/dice1.png";
+    document.getElementById("user-die2").src = "images/dice1.png";
+    document.getElementById("computer-die1").src = "images/dice1.png";
+    document.getElementById("computer-die2").src = "images/dice1.png";
+
+    document.getElementById("winner-popup").classList.add("hidden");
 }
 
 function showPopup(message) {

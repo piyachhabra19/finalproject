@@ -19,10 +19,10 @@ document.getElementById("roll-dice").addEventListener("click", () => {
         const computerDice1 = rollDice();
         const computerDice2 = rollDice();
 
-        document.getElementById("user-die1").src = `../images/dice${userDice1}.png`;
-        document.getElementById("user-die2").src = `../images/dice${userDice2}.png`;
-        document.getElementById("computer-die1").src = `../images/dice${computerDice1}.png`;
-        document.getElementById("computer-die2").src = `../images/dice${computerDice2}.png`;
+        document.getElementById("user-die1").src = `images/dice${userDice1}.png`;
+        document.getElementById("user-die2").src = `images/dice${userDice2}.png`;
+        document.getElementById("computer-die1").src = `images/dice${computerDice1}.png`;
+        document.getElementById("computer-die2").src = `images/dice${computerDice2}.png`;
 
         const userRoundScore = calculateScore(userDice1, userDice2);
         const computerRoundScore = calculateScore(computerDice1, computerDice2);
@@ -76,10 +76,10 @@ function resetGame() {
     document.getElementById("computer-score").textContent = computerScore;
     document.getElementById("result-message").textContent = "";
 
-    document.getElementById("user-die1").src = `../images/dice1.png`;
-    document.getElementById("user-die2").src = `../images/dice1.png`;
-    document.getElementById("computer-die1").src = `../images/dice1.png`;
-    document.getElementById("computer-die2").src = `../images/dice1.png`;
+    document.getElementById("user-die1").src = `images/dice1.png`;
+    document.getElementById("user-die2").src = `images/dice1.png`;
+    document.getElementById("computer-die1").src = `images/dice1.png`;
+    document.getElementById("computer-die2").src = `images/dice1.png`;
 }
 
 function showPopup(message) {

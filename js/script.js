@@ -98,5 +98,5 @@ function showPopup(message) {
     setTimeout(() => {
         document.getElementById("winner-message").textContent = message;
         document.getElementById("winner-popup").classList.remove("hidden");
-    }, 3000); // Delay of 3 seconds (3000ms)
+    }, 5000); // Delay of 5 seconds (5000ms)
 }

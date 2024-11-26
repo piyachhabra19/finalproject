@@ -6,13 +6,12 @@ document.getElementById("start-game").addEventListener("click", () => {
     document.getElementById("popup-start").classList.add("hidden");
     document.getElementById("instructions").classList.remove("hidden");
 });
-// Event listener for closing the instructions popup and opening scoring rules
+
 document.getElementById("close-instructions").addEventListener("click", () => {
     document.getElementById("instructions").classList.add("hidden");
     document.getElementById("scoring-rules").classList.remove("hidden");
 });
 
-// Event listener for closing the scoring rules popup
 document.getElementById("close-scoring").addEventListener("click", () => {
     document.getElementById("scoring-rules").classList.add("hidden");
     document.getElementById("game-box").classList.remove("hidden");
@@ -36,13 +35,11 @@ document.getElementById("roll-dice").addEventListener("click", () => {
         userScore += userRoundScore;
         computerScore += computerRoundScore;
 
-        // Display individual round scores
         const roundDetailsElement = document.getElementById("round-details");
         const roundInfo = document.createElement("p");
         roundInfo.textContent = `Round ${rounds + 1}: You scored ${userRoundScore}, Computer scored ${computerRoundScore}`;
         roundDetailsElement.appendChild(roundInfo);
 
-        // Update total scores
         document.getElementById("user-score").textContent = userScore;
         document.getElementById("computer-score").textContent = computerScore;
 
@@ -61,10 +58,6 @@ document.getElementById("roll-dice").addEventListener("click", () => {
 });
 
 document.getElementById("reset-game").addEventListener("click", resetGame);
-
-document.getElementById("close-popup").addEventListener("click", () => {
-    document.getElementById("winner-popup").classList.add("hidden");
-});
 
 function rollDice() {
     return Math.floor(Math.random() * 6) + 1;
@@ -93,7 +86,6 @@ function resetGame() {
     document.getElementById("computer-die1").src = `../images/dice1.png`;
     document.getElementById("computer-die2").src = `../images/dice1.png`;
 
-    // Clear individual round scores
     const roundDetailsElement = document.getElementById("round-details");
     roundDetailsElement.innerHTML = "";
 
@@ -101,8 +93,20 @@ function resetGame() {
 }
 
 function showPopup(message) {
+    document.getElementById("winner-message").textContent = message;
+    document.getElementById("winner-popup").classList.remove("hidden");
+
     setTimeout(() => {
-        document.getElementById("winner-message").textContent = message;
-        document.getElementById("winner-popup").classList.remove("hidden");
-    }, 1000); // Delay of 1 seconds (5000ms)
+        document.getElementById("post-game-options").classList.remove("hidden");
+    }, 1000);
+
+    document.getElementById("main-menu").addEventListener("click", () => {
+        resetGame();
+        document.getElementById("game-box").classList.add("hidden");
+        document.getElementById("popup-start").classList.remove("hidden");
+    });
+
+    document.getElementById("new-game").addEventListener("click", () => {
+        resetGame();
+    });
 }

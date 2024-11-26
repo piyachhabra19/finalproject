@@ -29,7 +29,7 @@
         </div>
 
         <!-- Scoring Rules Popup -->
-         <div id="scoring-rules" class="popup hidden">
+        <div id="scoring-rules" class="popup hidden">
             <h2>Scoring Rules</h2>
             <p>1. Rolling a 1 in any die gives a score of 0 for that round.</p>
             <p>2. Rolling a pair (e.g., 5 and 5) gives double the total: (5+5)*2=20.</p>
@@ -75,7 +75,10 @@
         <!-- Winner Popup -->
         <div id="winner-popup" class="popup hidden">
             <p id="winner-message"></p>
-            <button id="close-popup">X</button>
+            <div id="post-game-options" class="hidden">
+                <button id="main-menu">Main Menu</button>
+                <button id="new-game">New Game</button>
+            </div>
         </div>
     </div>
 </body>
